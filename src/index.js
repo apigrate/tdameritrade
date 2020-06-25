@@ -99,10 +99,7 @@ class TDAConnector extends EventEmitter {
   /**
    * Given an authorization code, obtain an access token and refresh token for using the API.
    * Note the connector's internal credentials are set during this process.
-   * 
-   * @param {*} grant_type 
-   * @param {*} refresh_token 
-   * @param {*} code 
+   * @param {*} code the authorization code received from the TD Ameritrade OAuth callback request.
    * 
    * @returns an object containing an access token, a refresh token and some additional scope information.
    * @example
