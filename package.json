@@ -1,0 +1,32 @@
+{
+  "name": "@apigrate/tdameritrade",
+  "version": "1.0.0",
+  "description": "NodeJS SDK for the TD Ameritrade API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apigrate/tdameritrade.git"
+  },
+  "keywords": [
+    "TDAmeritrade",
+    "node",
+    "API"
+  ],
+  "author": "Derek Gau",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/apigrate/tdameritrade/issues"
+  },
+  "homepage": "https://github.com/apigrate/tdameritrade#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "node-fetch": "^2.6.0",
+    "query-string": "^6.13.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
