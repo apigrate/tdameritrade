@@ -1,6 +1,30 @@
 
+## Summary
 
-## Examples
+A NodeJS API connector library for the TD Ameritrade API.
+
+To install:
+
+```bash
+npm install @apigrate/tdameritrade
+```
+### Supported API Methods
+
+* Accounts
+  * Get Account
+  * Get Accounts
+* Instruments
+  * Search Instruments
+* Price History
+  * Get Price History
+* Quotes
+  * Get Quote
+  * Get Quotes
+* Transaction History
+  * Get Transaction
+  * Get Transactions
+
+## Usage and Examples
 
 ### Obtaining an OAuth Access Token
 You need to initiate a dialog for your user to start the authorization process. There's a built-in method for doing that.

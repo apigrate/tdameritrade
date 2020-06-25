@@ -46,6 +46,15 @@ class TDAConnector extends EventEmitter {
   }
 
   /**
+   * Account balances, positions and orders for a specific account.
+   * @param {*} accountId 
+   * @param {*} parameters 
+   */
+  async getAccount(accountId, parameters){
+    return this.doFetch('GET', `${this.base_url}/accounts/${accountId}`, parameters);
+  }
+
+  /**
    * Search or retrieve instrument data, including fundamental data. 
    * @param {*} symbol
    * @param {*} projection
@@ -73,8 +82,17 @@ class TDAConnector extends EventEmitter {
    * @param {string} accountId 
    * @param {*} parameters @see https://developer.tdameritrade.com/transaction-history/apis/get/accounts/%7BaccountId%7D/transactions-0
    */
-  async getTransactionHistory(accountId, parameters){
+  async getTransactions(accountId, parameters){
     return this.doFetch('GET', `${this.base_url}/accounts/${accountId}/transactions`, parameters);
+  }
+
+  /**
+   * Get a transaction for a specific account
+   * @param {string} accountId 
+   * @param {*} parameters @see https://developer.tdameritrade.com/transaction-history/apis/get/accounts/%7BaccountId%7D/transactions-0
+   */
+  async getTransaction(accountId, transactionId){
+    return this.doFetch('GET', `${this.base_url}/accounts/${accountId}/transactions/${transactionId}`);
   }
 
   /**
@@ -315,7 +333,7 @@ class TDAConnector extends EventEmitter {
 
 class ApiError extends Error {};
 class ApiAuthError extends Error {};
-exports.TDAConnector = TDAConnector;
 
+exports.TDAConnector = TDAConnector;
 exports.ApiError = ApiError;
 

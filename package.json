@@ -1,6 +1,6 @@
 {
   "name": "@apigrate/tdameritrade",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NodeJS SDK for the TD Ameritrade API.",
   "main": "./src/index.js",
   "scripts": {
