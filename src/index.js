@@ -264,7 +264,7 @@ class TDAConnector extends EventEmitter {
     try{
       debug(`${method} ${full_url}`);
       
-      let response = await fetch(url, fetchOpts);
+      let response = await fetch(full_url, fetchOpts);
 
       let result = null;
       if(response.ok){
