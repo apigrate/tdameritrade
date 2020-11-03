@@ -68,6 +68,14 @@ class TDAConnector extends EventEmitter {
   async getQuote(symbol){
     return this.doFetch('GET', `${this.base_url}/marketdata/${symbol}/quotes`);
   }
+  
+  /**
+   * Get multiple quotes at once with one API call.
+   * @param {array} symbols an array of symbols to check
+   */
+  async getQuotes(symbols){
+    return this.doFetch('GET', `${this.base_url}/marketdata/quotes`,{symbol: symbols ? symbols.join(",") : null });
+  }
 
   /** Gets price history for a period.
    * @param {string} symbol
